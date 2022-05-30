@@ -1,6 +1,6 @@
 # Secure sign 
 
-### Set parameters
+## Set parameters
 1. Navigate to app and enter on parameters config
 
 ![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/593FC2CA-5FD6-4B36-86CA-69F5A89F99BD.jpeg "Logo Title Text 1")
@@ -14,8 +14,7 @@
 ![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/018AE7D9-A52F-4E5A-A031-05D0FECD18E2.jpeg "Logo Title Text 1")
 
 
-### Postman requests
----
+## Postman requests
 #### *Example api collection*
 [Download postman collection](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/Secure_sign.postman_collection.json)
 
@@ -26,19 +25,17 @@
 ![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/CF305859-6D4D-48AB-910B-4E01A953EEDA.jpeg "Logo Title Text 1")
 
 2. Collection contains two request
-  - Scan pdf
+### Scan pdf
+  
 
-
-     Body requires a pdf form document with a key named pdfBytes in multipart form data request
+Body requires a pdf form document with a key named pdfBytes in multipart form data request
      
-     [Download example pdf template](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/template_document.pdf)
-
+[Download example pdf template](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/template_document.pdf)
+    
+![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/6863CFC0-A954-4554-A76A-48AF6BB2E70C.jpeg "Logo Title Text 1")
      
-     ![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/6863CFC0-A954-4554-A76A-48AF6BB2E70C.jpeg "Logo Title Text 1")
-     
-     
-     this request returns a json with the document fields and keys for configuration,
-     similar to the following
+this request returns a json with the document fields and keys for configuration,
+similar to the following
      
      ```json
     {
@@ -160,7 +157,49 @@
   - pdfUrl:   
   - pdfExampleReference: 
   - fields: 
+  
+  Each field contains especific parameters for configuration
+  
+  ```json
+          "key": {
+            "type": "String",
+            "label": "customLabel",
+            "defaultValue": "string value",
+            "optional": false,
+            "uniforms": {
+                "disable": false,
+                "readOnly": false,            
+                "min": 0,
+                "max": 99
+            },
+            "configs": {
+                "page": 1,
+                "initials": false,
+                "name": true
+            }
+        },
+  ```
+  
+  - type: Automatically generated, can be String, Number or Boolean
+  - label: A more descriptive custom label for the form [default = key]
+  - defaultValue: A value per default for the form field 
+  - optional: Required for field validation [default = false]
+  
+  **uniforms**
+  - disable: Disable the field in the form [default = false]
+  - readOnly: Disables the ability to modify the field in the form [default = false]
+  - min: Minimum length for the field [default = 0] 
+  - max: Maximum length for the field [default = 99]
+  
+  **config**
+  - page: Automatically generated, number of the page that contains the field
+  - initials: Tag for initials fields [default = false]
+  - name: Tag for name fields [default = false] 
+
+---
+### Save document
+
+![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/24152146-4D3F-434A-9AA1-A5F402B3963A.jpeg "Logo Title Text 1")
 
 
 
-+ Save document
