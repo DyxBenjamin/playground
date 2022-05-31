@@ -26,7 +26,7 @@
 
 2. Collection contains two request
 ### Scan pdf
-  
+ > https://{{host}}/api/generate
 
 Body requires a pdf form document with a key named pdfBytes in multipart form data request
      
@@ -34,7 +34,7 @@ Body requires a pdf form document with a key named pdfBytes in multipart form da
     
 ![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/6863CFC0-A954-4554-A76A-48AF6BB2E70C.jpeg "Logo Title Text 1")
      
-this request returns a json with the document fields and keys for configuration,
+This request save the form pdf on serverless storage and returns a json with the document fields and keys for configuration,
 similar to the following
      
      ```json
@@ -150,11 +150,11 @@ similar to the following
     ```
 
   - emailOnSuccess: 
-  - reference:
-  - clientEmail:
+  - reference: 
+  - clientEmail: 
   - postOnSuccess:
   - message:
-  - pdfUrl:   
+  - pdfUrl: 
   - pdfExampleReference: 
   - fields: 
   
@@ -196,10 +196,42 @@ similar to the following
   - initials: Tag for initials fields [default = false]
   - name: Tag for name fields [default = false] 
 
+> ### Note
+> - Fields Name and Lastname are required, if it's necessary change the display you can use label parameter
+> - fields thats includes the word "Initials" automaticaly detects and apply initials config  
+> - fields thats includes the word "Name" automaticaly detects and apply name config  
+> - fields thats includes the word "Date" automaticaly detects and apply date config  
+
+
+
 ---
 ### Save document
+> https://{{host}}/api/secure-sign/save
+
+Enpoint to save the data of the document
+
+Body requires a document json previously generated and modified
+
 
 ![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/24152146-4D3F-434A-9AA1-A5F402B3963A.jpeg "Logo Title Text 1")
+
+
+If the data is correct the request returns a json with the document id, reference, client email and form url, similar to this:
+
+
+```json
+{
+    "id": "2457b1e9-0855-4d40-a375-e3d01eaa4ff2",
+    "reference": "xxxx-xx-xxxxxx",
+    "clientEmail": "example@email.com",
+    "url": "https://domain-host/secure-sign/2457b1e9-0855-4d40-a375-e3d01eaa4ff2"
+}
+```
+
+
+Accessing the url will send us to the form page
+
+![set parameters](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/20F27426-B5A5-4EEB-9F1A-973B88179F89.jpeg "Logo Title Text 1")
 
 
 
