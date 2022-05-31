@@ -7,7 +7,7 @@
 
 
 2. Configure the secret key and email parameters
-  - SECRET_KEY: Custom key for conection with the api
+  - SECRET_KEY: Custom key for conection with the API
   - CONFIG_EMAIL_API_KEY: Provided by [Mailgun | email service](https://www.mailgun.com/es/)
   - EMAIL_DOMAIN: Provided by [Mailgun | email service](https://www.mailgun.com/es/)
 
@@ -15,7 +15,7 @@
 
 
 ## Postman requests
-#### *Example api collection*
+#### *Example API collection*
 [Download postman collection](https://blazing-app-9ghrk.cloud.serverless.com/public/doc/Secure_sign.postman_collection.json)
 
 ---
