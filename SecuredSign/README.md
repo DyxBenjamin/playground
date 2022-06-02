@@ -7,73 +7,63 @@
  - Check Box
  - Dropdown
 
-![Image text = ('Supported fields.PNG')]
-
+![set parameters](./images/Supportedfields.PNG "Secured Sign Docs")
 
 ---
 
+## Text Field
 
-## Texf Field
-
-#### You can do these changes in Text Field properties.
-#### On tab Apprearance you can change:
+### You can do these changes in Text Field properties.
+### On tab Appearance you can change:
 - **Border color**
 - **Fill Color**
 - **Text**: only Font size and Text color.
 
-![Image text = ('Text Field Appearance TAB.PNG')]
+![set parameters](./images/TextFieldAppearanceTAB.png "Secured Sign Docs")
 
-#### You cannot change these properties because if you change them, they will not be displayed in the document:
+---
+
+### You cannot change these properties because if you change them, they will not be displayed in the document:
 - **Font**
 - **Line Style**
 - **Line Thickness**
-#### On tab options you can only
+### On tab options you can only
 - Set **Limit of** : to limit your text field.
 
-![Image text = ('Text Field Options TAB.PNG')]
-
+![set parameters](./images/TextFieldOptionsTAB.png "Secured Sign Docs")
 
 ---
-
 
 ## Date
-## The date field is the same as text field, but it is not recommended to use the **Limit of** property on this field
+### The date field is the same as text field, but it is not recommended to use the **Limit of** property on this field
 
-![Image text = ('Date Field Options Tab.PNG')]
+![set parameters](./images/DateFieldOptionsTab.png "Secured Sign Docs")
 
 ---
-
 
 ## Check Box
 
-#### In Checkbox fields, you can change the following properties in the appearance tab
+### In Checkbox fields, you can change the following properties in the appearance tab
 
 - **Border color**
 - **Fill color**
 - **Text color**
 
-![Image text = ('Check Box Field Appearance TAB.PNG')]
+![set parameters](./images/CheckBoxFieldAppearanceTAB.png "Secured Sign Docs")
 
 #### In the Options tab, you can change the property **Check Box Style**
 
-![Image text = ('Check Box Field Options TAB.PNG')]
-
-
----
-
-
-# Dropdown
-
-## These fields are the same as the Text field, but you can add **Items** in Options tab
-
-![Image text = ('Dropdown Field Options TAB.PNG')]
-
+![set parameters](./images/CheckBoxFieldOptionsTAB.png "Secured Sign Docs")
 
 ---
 
+## Dropdown
 
+### These fields are the same as the Text field, but you can add **Items** in Options tab
 
+![set parameters](./images/DropdownFieldOptionsTAB.png "Secured Sign Docs")
 
+---
 
 ## Set parameters
 1. Navigate to app and enter on parameters config
@@ -112,7 +102,7 @@ Body requires a pdf form document with a key named pdfBytes in multipart form da
 This request save the form pdf on serverless storage and returns a json with the document fields and keys for configuration,
 similar to the following
      
-     ```json
+```json
     {
     "emailOnSuccess": "",
     "reference": "",
@@ -222,7 +212,7 @@ similar to the following
         }
     }
     }
-    ```
+```
 
   - emailOnSuccess: 
   - reference: 
@@ -235,7 +225,7 @@ similar to the following
   
   Each field contains especific parameters for configuration
   
-  ```json
+```json
           "key": {
             "type": "String",
             "label": "customLabel",
@@ -253,7 +243,7 @@ similar to the following
                 "name": true
             }
         },
-  ```
+ ```
   
   - type: Automatically generated, can be String, Number or Boolean
   - label: A more descriptive custom label for the form [default = key]
@@ -273,9 +263,9 @@ similar to the following
 
 > ### Note
 > - Fields Name and Lastname are required, if it's necessary change the display you can use label parameter
-> - fields thats includes the word "Initials" automaticaly detects and apply initials config  
-> - fields thats includes the word "Name" automaticaly detects and apply name config  
-> - fields thats includes the word "Date" automaticaly detects and apply date config  
+> - fields that's includes the word "Initials" automatically detects and apply initials config  
+> - fields that's includes the word "Name" automatically detects and apply name config  
+> - fields that's includes the word "Date" automatically detects and apply date config  
 
 
 
@@ -283,7 +273,7 @@ similar to the following
 ### Save document
 > https://{{host}}/api/secure-sign/save
 
-Enpoint to save the data of the document
+Endpoint to save the data of the document
 
 Body requires a document json previously generated and modified
 
