@@ -1,5 +1,80 @@
 # Secure sign 
 
+## Supported Fields
+
+ - Text Field
+ - Date
+ - Check Box
+ - Dropdown
+
+![Image text = ('Supported fields.PNG')]
+
+
+---
+
+
+## Texf Field
+
+#### You can do these changes in Text Field properties.
+#### On tab Apprearance you can change:
+- **Border color**
+- **Fill Color**
+- **Text**: only Font size and Text color.
+
+![Image text = ('Text Field Appearance TAB.PNG')]
+
+#### You cannot change these properties because if you change them, they will not be displayed in the document:
+- **Font**
+- **Line Style**
+- **Line Thickness**
+#### On tab options you can only
+- Set **Limit of** : to limit your text field.
+
+![Image text = ('Text Field Options TAB.PNG')]
+
+
+---
+
+
+## Date
+## The date field is the same as text field, but it is not recommended to use the **Limit of** property on this field
+
+![Image text = ('Date Field Options Tab.PNG')]
+
+---
+
+
+## Check Box
+
+#### In Checkbox fields, you can change the following properties in the appearance tab
+
+- **Border color**
+- **Fill color**
+- **Text color**
+
+![Image text = ('Check Box Field Appearance TAB.PNG')]
+
+#### In the Options tab, you can change the property **Check Box Style**
+
+![Image text = ('Check Box Field Options TAB.PNG')]
+
+
+---
+
+
+# Dropdown
+
+## These fields are the same as the Text field, but you can add **Items** in Options tab
+
+![Image text = ('Dropdown Field Options TAB.PNG')]
+
+
+---
+
+
+
+
+
 ## Set parameters
 1. Navigate to app and enter on parameters config
 
